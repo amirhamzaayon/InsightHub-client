@@ -5,6 +5,7 @@ import { RecentReview } from "../Components/RecentReview";
 import { HeroSection } from "../Components/HeroSection";
 import { NavBar } from "../Components/NavBar";
 import { OurPartners } from "../Components/OurPartners";
+import { Button } from "@/Components/ui/button";
 
 export const HomeLayout = () => {
   return (
@@ -14,20 +15,20 @@ export const HomeLayout = () => {
         <HeroSection></HeroSection>
       </header>
       <main>
+        <section className="w-10/12 py-12 mx-auto">
+          <OurPartners></OurPartners>
+        </section>
         <section>
           <Outlet></Outlet>
         </section>
         <section>
-          <OurPartners></OurPartners>
-        </section>
-        <section>
           <RecentReview></RecentReview>
         </section>
-        <section>
+        <section className="w-6/12 py-12 mx-auto">
           <FrequentlyQuestion></FrequentlyQuestion>
         </section>
       </main>
-      <footer>
+      <footer className="w-10/12 mx-auto ">
         <Footer></Footer>
       </footer>
     </div>
