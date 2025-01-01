@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 export const OurPartners = () => {
   const ourPartners = [
     { id: 1, name: "Adidas", logo: "/our-partners/adidas.png" },
@@ -23,36 +24,39 @@ export const OurPartners = () => {
   const scrollingPartners = [...ourPartners, ...ourPartners];
 
   return (
-    <div className="py-10 overflow-hidden bg-gray-100 rounded-lg">
+    <div className="py-10 overflow-hidden rounded-lg">
       <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">
         Our Partners
       </h2>
-      <motion.div
-        className="flex gap-6"
-        // initial={{ x: "0%" }}
-        animate={{ x: ["0%", "-100%"] }}
-        // initial={{ x: "100%" }}
-        // animate={{ x: "-100%" }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          // repeatType: "mirror",
-          ease: "linear",
-        }}
-      >
-        {scrollingPartners.map((partner) => (
-          <div
-            key={partner.id}
-            className="p-4 rounded-lg flex items-center justify-center min-w-[150px]"
-          >
-            <img
-              src={partner.logo}
-              alt={partner.name}
-              className="w-full max-w-[120px] h-auto object-contain"
-            />
-          </div>
-        ))}
-      </motion.div>
+      <div className="bg-gray-100 rounded-lg">
+        {/* <motion.div
+          className="flex gap-6"
+          // initial={{ x: "100%" }}
+          // animate={{ x: "-100%" }}
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            // repeatType: "mirror",
+            ease: "linear",
+          }}
+        > */}
+        <Marquee gradient={true} speed={100} pauseOnHover={true}>
+          {scrollingPartners.map((partner) => (
+            <div
+              key={partner.id}
+              className=" p-4 rounded-lg flex items-center justify-center min-w-[180px]"
+            >
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="w-full max-w-[120px] h-auto object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
+        {/* </motion.div> */}
+      </div>
     </div>
   );
 };

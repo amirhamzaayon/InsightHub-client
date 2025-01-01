@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { Footer } from "../Components/Footer";
 import { FrequentlyQuestion } from "../Components/FrequentlyQuestion";
-import { RecentReview } from "../Components/RecentReview";
 import { HeroSection } from "../Components/HeroSection";
 import { NavBar } from "../Components/NavBar";
 import { OurPartners } from "../Components/OurPartners";
-import { Button } from "@/Components/ui/button";
+import { ServiceCard } from "@/Components/ServiceCard";
+import { RecentReviews } from "@/Components/RecentReviews";
 
 export const HomeLayout = () => {
   return (
@@ -18,11 +18,12 @@ export const HomeLayout = () => {
         <section className="w-10/12 py-12 mx-auto">
           <OurPartners></OurPartners>
         </section>
-        <section>
+        <section className="w-6/12 py-12 mx-auto">
+          <ServiceCard></ServiceCard>
           <Outlet></Outlet>
         </section>
-        <section>
-          <RecentReview></RecentReview>
+        <section className="w-6/12 py-12 mx-auto">
+          <RecentReviews></RecentReviews>
         </section>
         <section className="w-6/12 py-12 mx-auto">
           <FrequentlyQuestion></FrequentlyQuestion>
