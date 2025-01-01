@@ -8,6 +8,7 @@ import { FeaturesLayout } from "../Layouts/FeaturesLayout";
 import { MyServicesPage } from "../Pages/MyServicesPage";
 import { MyReviewsPage } from "../Pages/MyReviewsPage";
 import { AddServicePopupForm } from "../Components/PopupForm/AddServicePopupForm";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/features",
-    element: <FeaturesLayout></FeaturesLayout>,
+    element: (
+      <PrivateRoute>
+        <FeaturesLayout></FeaturesLayout>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "/features/MyServices",

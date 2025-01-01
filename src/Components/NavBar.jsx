@@ -1,7 +1,10 @@
+import { AuthContext } from "@/Providers/AuthProvider";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
-  const user = null;
+  const { user, logOut } = useContext(AuthContext);
+  // console.log(user);
   const publiceNavLinks = (
     <>
       <Link to="/">Home</Link>
@@ -77,7 +80,7 @@ export const NavBar = () => {
                 <div className="w-10 rounded-full">
                   <img
                     alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    src={user.photoURL}
                   />
                 </div>
               </div>
@@ -87,16 +90,18 @@ export const NavBar = () => {
               >
                 <li>
                   <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
+                    {user.displayName}
+                    <span onClick={logOut} className="p-3 badge">
+                      Logout
+                    </span>
                   </a>
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <a>Update Profile</a>
                 </li>
-                <li>
-                  <a>Logout</a>
-                </li>
+                {/* <li>
+                  <a onClick={logOut}>Logout</a>
+                </li> */}
               </ul>
             </div>
           ) : (
