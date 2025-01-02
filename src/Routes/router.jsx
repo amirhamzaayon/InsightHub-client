@@ -9,6 +9,7 @@ import { MyServicesPage } from "../Pages/MyServicesPage";
 import { MyReviewsPage } from "../Pages/MyReviewsPage";
 import { AddServicePopupForm } from "../Components/PopupForm/AddServicePopupForm";
 import PrivateRoute from "./PrivateRoute";
+import { ServiceDetailsPage } from "@/Pages/ServiceDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,17 @@ const router = createBrowserRouter([
         // loader: fetch()
       },
     ],
+  },
+  {
+    path: "/ServiceDetailsPage",
+    element: <ServiceDetailsPage></ServiceDetailsPage>,
+    // children: [
+    //   {
+    //     path: "",
+    //     element: <ServiceCards></ServiceCards>,
+    //     // loader: fetch()
+    //   },
+    // ],
   },
   {
     path: "/auth",

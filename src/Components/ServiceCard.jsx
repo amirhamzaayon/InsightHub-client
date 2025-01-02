@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 export const ServiceCard = () => {
+  const navigate = useNavigate();
   return (
     // <div className="flex gap-4 p-6 bg-gray-100 rounded-lg">
     //   <div className="w-1/3 h-auto bg-gray-300 rounded-lg">
@@ -32,7 +34,9 @@ export const ServiceCard = () => {
           <button className="mt-2 btn md:mt-0">Price</button>
         </div>
         <div className="text-sm md:text-base">Short Description of Product</div>
-        <button className="btn">Know More</button>
+        <button onClick={() => navigate("/ServiceDetailsPage")} className="btn">
+          Know More
+        </button>
       </div>
     </div>
   );
