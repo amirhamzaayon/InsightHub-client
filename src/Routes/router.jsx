@@ -7,9 +7,9 @@ import { ServiceCards } from "../Components/ServiceCards";
 import { FeaturesLayout } from "../Layouts/FeaturesLayout";
 import { MyServicesPage } from "../Pages/MyServicesPage";
 import { MyReviewsPage } from "../Pages/MyReviewsPage";
-import { AddServicePopupForm } from "../Components/PopupForm/AddServicePopupForm";
 import PrivateRoute from "./PrivateRoute";
 import { ServiceDetailsPage } from "@/Pages/ServiceDetailsPage";
+import AddServicePopupForm from "@/Components/PopupForm/AddServicePopupForm";
 
 const router = createBrowserRouter([
   {

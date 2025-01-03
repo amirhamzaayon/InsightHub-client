@@ -29,7 +29,10 @@ export const ServiceCard = () => {
         <div className="flex flex-col justify-between md:flex-row">
           <div className="flex flex-col items-start gap-1">
             <Badge>Food</Badge>
-            <h3 className="text-lg font-bold">Service Name</h3>
+            <div>
+              <h3 className="text-2xl font-bold">Service Name</h3>
+              <p>Company Name</p>
+            </div>
           </div>
           <button className="mt-2 btn md:mt-0">Price</button>
         </div>
