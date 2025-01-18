@@ -41,13 +41,16 @@ const UpdateReviewPopupForm = ({ review }) => {
       }),
     };
 
-    fetch(`http://localhost:5000/services/${review._id}/reviews`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedReview),
-    })
+    fetch(
+      `https://insight-hub-server.vercel.app/services/${review._id}/reviews`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedReview),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {

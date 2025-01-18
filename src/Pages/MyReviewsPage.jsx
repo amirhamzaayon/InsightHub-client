@@ -7,7 +7,9 @@ export const MyReviewsPage = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?userEmail=${user.email}`)
+    fetch(
+      `https://insight-hub-server.vercel.app/reviews?userEmail=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMyReviews(data));
   }, [user.email, myReviews]);

@@ -7,7 +7,7 @@ export const MyServicesPage = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services?email=${user.email}`)
+    fetch(`https://insight-hub-server.vercel.app/services?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyServices(data));
   }, [user.email]);

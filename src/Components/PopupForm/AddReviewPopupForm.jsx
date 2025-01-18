@@ -38,7 +38,7 @@ const AddReviewPopupForm = ({ onClose, handleRatingChange }) => {
       }),
     };
 
-    fetch(`http://localhost:5000/services/${id}/reviews`, {
+    fetch(`https://insight-hub-server.vercel.app/services/${id}/reviews`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

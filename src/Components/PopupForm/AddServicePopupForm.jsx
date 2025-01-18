@@ -35,7 +35,7 @@ const AddServicePopupForm = () => {
 
     console.log(initialData);
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://insight-hub-server.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

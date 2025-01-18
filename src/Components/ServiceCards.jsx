@@ -5,7 +5,7 @@ export const ServiceCards = () => {
   // const [services, setServices] = useState([]);
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/services")
+  //   fetch("https://insight-hub-server.vercel.app/services")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setServices(data);
@@ -27,7 +27,7 @@ export const ServiceCards = () => {
       category: selectedCategory === "All" ? "" : selectedCategory,
     }).toString();
 
-    fetch(`http://localhost:5000/search?${query}`)
+    fetch(`https://insight-hub-server.vercel.app/search?${query}`)
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
@@ -37,7 +37,7 @@ export const ServiceCards = () => {
 
   // Fetch unique categories for filter dropdown
   const fetchCategories = () => {
-    fetch("http://localhost:5000/categories")
+    fetch("https://insight-hub-server.vercel.app/categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);

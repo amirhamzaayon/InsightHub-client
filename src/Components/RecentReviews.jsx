@@ -16,13 +16,13 @@ export const RecentReviews = () => {
   };
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/services/reviews")
+  //   fetch("https://insight-hub-server.vercel.app/services/reviews")
   //     .then((res) => res.json())
   //     .then((data) => setAllReviews(data));
   // }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allreviews")
+    fetch("https://insight-hub-server.vercel.app/allreviews")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch reviews");
         return res.json();

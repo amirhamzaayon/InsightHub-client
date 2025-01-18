@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-
 import UpdateReviewPopupForm from "./PopupForm/UpdateReviewPopupForm";
 import { AuthContext } from "@/Providers/AuthProvider";
 import { useContext } from "react";
@@ -17,7 +16,7 @@ export const MyReview = ({ review }) => {
     if (!confirmation) return;
 
     fetch(
-      `http://localhost:5000/services/${review._id}/reviews?userEmail=${user.email}`,
+      `https://insight-hub-server.vercel.app/services/${review._id}/reviews?userEmail=${user.email}`,
       {
         method: "DELETE",
       }

@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     path: "/ServiceDetailsPage/:id",
     element: <ServiceDetailsPage></ServiceDetailsPage>,
     loader: ({ params }) =>
-      fetch(`http://localhost:5000/services/${params.id}`),
+      fetch(`https://insight-hub-server.vercel.app/services/${params.id}`),
   },
   {
     path: "/auth",

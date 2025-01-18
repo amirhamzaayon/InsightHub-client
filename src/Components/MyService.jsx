@@ -25,7 +25,7 @@ export const MyService = ({ service }) => {
     );
     if (!confirmation) return;
 
-    fetch(`http://localhost:5000/services/${_id}`, {
+    fetch(`https://insight-hub-server.vercel.app/services/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

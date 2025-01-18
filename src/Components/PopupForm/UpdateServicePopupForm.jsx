@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 export const UpdateServicePopupForm = ({ serviceId, initialData }) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-
   const togglePopup = () => setIsOpen(!isOpen);
   // const { user } = useContext(AuthContext);
   const [formData, setFormData] = useState(initialData || {});
@@ -24,7 +23,7 @@ export const UpdateServicePopupForm = ({ serviceId, initialData }) => {
   const handleUpdateService = (e) => {
     e.preventDefault();
 
-    fetch(`http://localhost:5000/myservices/${serviceId}`, {
+    fetch(`https://insight-hub-server.vercel.app/myservices/${serviceId}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -111,9 +110,15 @@ export const UpdateServicePopupForm = ({ serviceId, initialData }) => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-black focus:border-black"
                   >
+                    <option selected disabled>
+                      Please Select an Option
+                    </option>
+                    <option>Electrical</option>
+                    <option>Health Care</option>
+                    <option>Pet Care</option>
+                    <option>Car Repair</option>
                     <option>Food</option>
                     <option>Travel</option>
-                    <option>Home Service</option>
                     <option>Other</option>
                   </select>
                 </div>
@@ -127,9 +132,14 @@ export const UpdateServicePopupForm = ({ serviceId, initialData }) => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-black focus:border-black"
                   >
+                    <option selected disabled>
+                      Please Select an Price Range
+                    </option>
                     <option>500-1000 BDT</option>
                     <option>1000-2000 BDT</option>
-                    <option>2000-5000 BDT</option>
+                    <option>2000-3000 BDT</option>
+                    <option>3000-5000 BDT</option>
+                    <option>Above 5000 BDT</option>
                   </select>
                 </div>
               </div>
