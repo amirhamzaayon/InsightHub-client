@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 export const HeroSection = () => {
   const images = [
-    "/hero-images/pexels-danikprihodko.jpg",
-    "/hero-images/pexels-giancarlo-gallardo.jpg",
-    "/hero-images/pexels-olia-danilevich.jpg",
-    "/hero-images/priscilla-du-preez.jpg",
+    "/hero-images/car-repair.jpg",
+    "/hero-images/electrician.jpg",
+    "/hero-images/food-delivery.jpg",
+    "/hero-images/pet-care.jpg",
   ];
 
   const settings = {

@@ -5,17 +5,31 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
   // console.log(user);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const publiceNavLinks = (
     <>
       <Link to="/">Home</Link>
-      <Link to="/ServiceCards">Services</Link>
-      <Link to="/FrequentlyQuestion">More to Know</Link>
+      <Link to="#ServiceCards" onClick={() => scrollToSection("ServiceCards")}>
+        Services
+      </Link>
+      <Link to="#faq" onClick={() => scrollToSection("faq")}>
+        More to Know
+      </Link>
     </>
   );
   const userNavLinks = (
     <>
       <Link to="/">Home</Link>
-      <Link to="/">Services</Link>
+      <Link to="#ServiceCards" onClick={() => scrollToSection("ServiceCards")}>
+        Services
+      </Link>
       <Link to="/features/MyServices">My services</Link>
       <Link to="/features/MyReviews">My Reviews</Link>
       <Link to="/features/AddService">Add Services</Link>

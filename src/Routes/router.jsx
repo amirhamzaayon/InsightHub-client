@@ -24,15 +24,10 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/ServiceDetailsPage",
+    path: "/ServiceDetailsPage/:id",
     element: <ServiceDetailsPage></ServiceDetailsPage>,
-    // children: [
-    //   {
-    //     path: "",
-    //     element: <ServiceCards></ServiceCards>,
-    //     // loader: fetch()
-    //   },
-    // ],
+    loader: ({ params }) =>
+      fetch(`http://localhost:5000/services/${params.id}`),
   },
   {
     path: "/auth",

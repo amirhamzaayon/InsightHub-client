@@ -18,14 +18,14 @@ export const HomeLayout = () => {
         <section className="w-10/12 py-12 mx-auto">
           <OurPartners></OurPartners>
         </section>
-        <section className="w-6/12 py-12 mx-auto">
+        <section id="ServiceCards" className="w-6/12 py-12 mx-auto">
           <ServiceCard></ServiceCard>
           <Outlet></Outlet>
         </section>
         <section className="w-6/12 py-12 mx-auto">
           <RecentReviews></RecentReviews>
         </section>
-        <section className="w-6/12 py-12 mx-auto">
+        <section id="faq" className="w-6/12 py-12 mx-auto">
           <FrequentlyQuestion></FrequentlyQuestion>
         </section>
       </main>

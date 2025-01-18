@@ -1,35 +1,53 @@
 import { Badge } from "@/components/ui/badge";
 import { FaStar } from "react-icons/fa6";
-export const ServiceDetails = () => {
+export const ServiceDetails = ({ serviceDetails }) => {
+  const {
+    _id,
+    companyName,
+    serviceTitle,
+    category,
+    priceRange,
+    serviceImage,
+    website,
+    description,
+    reviewsInfo,
+    // reviewsInfo.averageRating,
+    // reviewsInfo.totalReviews,
+  } = serviceDetails || {};
+
   return (
     <div className="flex flex-col gap-4 p-6 rounded-lg">
       <div>
         <img
           className="w-full h-auto border-8 rounded-lg border-slate-100"
-          src="/hero-images/pexels-danikprihodko.jpg"
+          src={serviceImage}
           alt=""
         />
       </div>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-start gap-1">
-          <Badge>Category</Badge>
+          <Badge>{category}</Badge>
           <div className="flex items-center justify-between w-full gap-6 ">
             <div>
-              <h3 className="text-2xl font-bold">Service Name</h3>
-              <p>Company Name</p>
+              <h3 className="text-2xl font-bold">{serviceTitle}</h3>
+              <p>{companyName}</p>
             </div>
             <div>
-              <FaStar />
+              <p>
+                Average Rating: {reviewsInfo[0].averageRating}
+                <FaStar className="inline-block" />
+                <p>Total Review: {reviewsInfo[1].totalReviews}</p>
+              </p>
             </div>
           </div>
         </div>
 
         <div className="w-full h-32 p-4 rounded-lg bg-slate-100">
-          Short Description of Product
+          {description}
         </div>
         <div className="flex gap-4">
-          <button className="flex-grow btn">Price Ranges</button>
-          <button className="flex-grow btn">Visite Website</button>
+          <button className="flex-grow btn">{priceRange}</button>
+          <button className="flex-grow btn">{website}</button>
         </div>
         <button className="rounded-full btn">Book Now</button>
       </div>
