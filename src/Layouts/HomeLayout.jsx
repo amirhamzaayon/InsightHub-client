@@ -12,7 +12,9 @@ export const HomeLayout = () => {
     <div className="font-roboto">
       <header className="w-10/12 mx-auto mt-6">
         <NavBar></NavBar>
-        <HeroSection></HeroSection>
+        <section id="Home">
+          <HeroSection></HeroSection>
+        </section>
       </header>
       <main>
         <section className="w-10/12 py-12 mx-auto">
