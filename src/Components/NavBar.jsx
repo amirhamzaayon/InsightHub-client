@@ -20,7 +20,9 @@ export const NavBar = () => {
   };
 
   const navLinkStyle = ({ isActive }) =>
-    isActive ? "border-b-2 border-green-400" : "";
+    isActive
+      ? "hover:border-b-2 hover:border-green-400"
+      : "border-b-2 border-green-400";
 
   const navLinks = (
     <>
@@ -40,31 +42,29 @@ export const NavBar = () => {
         Explore Services
       </NavLink>
 
-      <NavLink
-        to="#faq"
-        className={navLinkStyle}
-        onClick={() => scrollToSection("faq")}
-      >
-        Know More
-      </NavLink>
+      {user && user.email ? (
+        <></>
+      ) : (
+        <>
+          <NavLink
+            to="#faq"
+            className={navLinkStyle}
+            onClick={() => scrollToSection("faq")}
+          >
+            Know More
+          </NavLink>
+        </>
+      )}
     </>
   );
 
   const userActionLink = (
     <>
-      <NavLink
-        to="/features/MyServices"
-        className={navLinkStyle}
-        onClick={() => setIsMenuOpen(false)}
-      >
+      <NavLink to="/features/MyServices" onClick={() => setIsMenuOpen(false)}>
         My services
       </NavLink>
 
-      <NavLink
-        to="/features/MyReviews"
-        className={navLinkStyle}
-        onClick={() => setIsMenuOpen(false)}
-      >
+      <NavLink to="/features/MyReviews" onClick={() => setIsMenuOpen(false)}>
         My Reviews
       </NavLink>
     </>
@@ -72,7 +72,7 @@ export const NavBar = () => {
 
   return (
     <div className="sticky top-0 z-10 w-full">
-      <div className="px-4 rounded-full navbar bg-slate-100 sm:justify-between">
+      <div className="flex px-4 bg-green-100 rounded-full navbar sm:justify-between ">
         {/* Logo - always visible */}
         <div className="flex-1">
           <a className="text-xl bg-green-400 border-none rounded-full btn hover:bg-green-300">
@@ -113,7 +113,7 @@ export const NavBar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="items-center justify-center hidden gap-6 font-medium md:flex flex-2">
+        <div className="items-center justify-center hidden gap-6 px-6 font-medium flex-2 md:flex">
           {navLinks}
         </div>
 
@@ -131,7 +131,7 @@ export const NavBar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="z-10 p-2 shadow-sm dropdown-content menu bg-base-100 rounded-box w-52"
+                  className="z-10 p-2 mt-3 shadow-sm dropdown-content menu bg-base-100 rounded-box w-52"
                 >
                   <li>{userActionLink}</li>
                 </ul>
@@ -197,7 +197,7 @@ export const NavBar = () => {
 
       {/* Mobile Menu - conditionally rendered */}
       {isMenuOpen && (
-        <div className="px-4 py-3 shadow-md md:hidden bg-slate-100">
+        <div className="px-4 py-3 shadow-sm rounded-xl md:hidden bg-slate-100">
           <div className="flex flex-col gap-4">
             {/* Mobile Navigation Links */}
             <div className="flex flex-col gap-3 font-medium">{navLinks}</div>
