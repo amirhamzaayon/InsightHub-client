@@ -37,8 +37,9 @@ export const RecentReviews = () => {
 
   return (
     <div>
-      <h2 className="mb-6 text-2xl font-bold text-center">
-        Listen Recent Experience From Users
+      <h2 className="mb-12 font-bold text-center text-gray-800 text-3xl/normal">
+        Listen Latest Experience From Worldwide Users
+        <br /> And Their Insight About Services
       </h2>
       {/* <div className="grid grid-cols-3 gap-4">
         {allReviews.map((review, index) => (

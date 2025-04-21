@@ -72,10 +72,10 @@ export const NavBar = () => {
 
   return (
     <div className="sticky top-0 z-10 w-full">
-      <div className="flex px-4 bg-green-100 rounded-full navbar sm:justify-between ">
+      <div className="flex px-4 rounded-full bg-green-50 navbar sm:justify-between ">
         {/* Logo - always visible */}
         <div className="flex-1">
-          <a className="text-xl bg-green-400 border-none rounded-full btn hover:bg-green-300">
+          <a className="text-xl bg-green-400 border border-none rounded-full btn hover:bg-green-300">
             InsightHub
           </a>
         </div>
@@ -120,12 +120,12 @@ export const NavBar = () => {
         {/* Desktop User Actions */}
         <div className="flex-none hidden md:flex">
           {user && user.email ? (
-            <div className="p-1 space-x-1 border-2 rounded-full">
+            <div className="p-1 space-x-1 border-2 rounded-full border-green-600/25">
               <div className="dropdown dropdown-end">
                 <div
                   tabIndex={0}
                   role="button"
-                  className="border-none rounded-full btn hover:bg-green-400"
+                  className="border-none rounded-full btn hover:bg-green-300 "
                 >
                   My Activity
                 </div>
@@ -141,8 +141,8 @@ export const NavBar = () => {
                 to="/features/AddService"
                 className={({ isActive }) =>
                   isActive
-                    ? "btn rounded-full bg-green-500 border-none"
-                    : "btn rounded-full bg-green-400 border-none hover:bg-green-300"
+                    ? "btn rounded-full bg-green-500  border-green-600/25"
+                    : "btn rounded-full bg-green-300  hover:bg-green-400  border-green-600/25"
                 }
               >
                 Add Service +

@@ -25,10 +25,10 @@ export const OurPartners = () => {
 
   return (
     <div className="py-10 overflow-hidden rounded-lg">
-      <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">
-        Our Partners
+      <h2 className="mb-12 font-bold text-center text-gray-800 text-3xl/normal ">
+        Get Insight of Worlds Top Brands <br /> And Their Services
       </h2>
-      <div className="bg-gray-100 rounded-lg">
+      <div className="rounded-lg bg-green-50">
         {/* <motion.div
           className="flex gap-6"
           // initial={{ x: "100%" }}

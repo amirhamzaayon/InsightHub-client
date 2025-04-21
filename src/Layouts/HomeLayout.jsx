@@ -20,14 +20,14 @@ export const HomeLayout = () => {
         <section className="w-10/12 py-12 mx-auto">
           <OurPartners></OurPartners>
         </section>
-        <section id="ServiceCards" className="w-6/12 py-12 mx-auto">
-          <ServiceCard></ServiceCard>
+        <section id="ServiceCards" className="w-10/12 py-12 mx-auto xl:w-6/12">
+          {/* <ServiceCard></ServiceCard> */}
           <Outlet></Outlet>
         </section>
-        <section className="w-6/12 py-12 mx-auto">
+        <section className="w-10/12 py-12 mx-auto xl:6/12">
           <RecentReviews></RecentReviews>
         </section>
-        <section id="faq" className="w-6/12 py-12 mx-auto">
+        <section id="faq" className="w-10/12 py-12 mx-auto xl:w-6/12">
           <FrequentlyQuestion></FrequentlyQuestion>
         </section>
       </main>

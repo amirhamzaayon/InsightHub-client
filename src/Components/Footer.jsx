@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <div>
-      <footer className="p-10 rounded-t-lg footer bg-base-200 text-base-content">
+      <footer className="p-10 rounded-t-lg bg-green-50 footer sm:footer-horizontal text-base-content">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -24,7 +24,7 @@ export const Footer = () => {
         </nav>
         <form>
           <h6 className="footer-title">Newsletter</h6>
-          <fieldset className="form-control w-80">
+          <fieldset className="form-control sm:w-72">
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
@@ -32,9 +32,11 @@ export const Footer = () => {
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered join-item"
+                className="input input-bordered join-item "
               />
-              <button className="btn btn-primary join-item">Subscribe</button>
+              <button className="bg-green-400 border-none btn join-item">
+                Subscribe
+              </button>
             </div>
           </fieldset>
         </form>

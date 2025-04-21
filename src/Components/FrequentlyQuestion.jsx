@@ -9,14 +9,14 @@ export const FrequentlyQuestion = () => {
   return (
     <div>
       <div>
-        <h2 className="mb-6 text-2xl font-bold text-center">
+        <h2 className="mb-12 font-bold text-center text-gray-800 text-3xl/normal">
           know More About Us
         </h2>
       </div>
       <Accordion
         type="single"
         collapsible
-        className="w-full px-4 border-2 rounded-lg"
+        className="w-full p-8 border rounded-lg border-green-600/25 bg-green-50/25"
       >
         <AccordionItem value="item-1">
           <AccordionTrigger>

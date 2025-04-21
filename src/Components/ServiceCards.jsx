@@ -55,8 +55,8 @@ export const ServiceCards = () => {
 
   return (
     <div>
-      <h2 className="mb-6 text-2xl font-bold text-center">
-        Find Your Service Partner
+      <h2 className="mb-6 font-bold text-center text-gray-800 text-3xl/relaxed">
+        Get Your Best Service Partner
       </h2>
       <div className="flex flex-col items-center gap-6 p-6 mb-6">
         {/* Search Input */}
@@ -71,16 +71,16 @@ export const ServiceCards = () => {
         </div>
 
         {/* Categories */}
-        <div className="w-full max-w-2xl p-2 rounded-full shadow-sm bg-slate-100">
-          <div className="flex flex-wrap justify-center gap-4 flex-shrink-1">
+        <div className="p-2 mx-6 rounded-full shadow-sm w-fit bg-green-50">
+          <div className="flex justify-center gap-4 overflow-x-auto flex-shrink-1">
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 text-sm font-medium text-black rounded-full transition-colors ${
+                className={`btn text-sm font-medium text-black rounded-full  transition-colors ${
                   selectedCategory === category
-                    ? "bg-blue-200 hover:bg-blue-600"
-                    : "bg-white hover:bg-gray-400"
+                    ? "bg-green-300 border-green-600/25"
+                    : "bg-white hover:bg-green-300 hover:border-green-600/25"
                 }`}
               >
                 {category}
