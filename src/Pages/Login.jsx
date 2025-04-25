@@ -27,7 +27,7 @@ export const Login = () => {
   };
   return (
     <div>
-      <div className="min-h-screen mt-6 hero bg-base-200 rounded-2xl">
+      <div className="min-h-[calc(100vh-132px)] mt-6 hero rounded-2xl bg-gradient-to-br from-green-100 via-white to-green-100">
         <div className="flex-col hero-content lg:flex-row-reverse">
           {/* <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>

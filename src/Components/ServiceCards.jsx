@@ -66,7 +66,7 @@ export const ServiceCards = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search by Service Title"
-            className="w-full p-2 text-lg text-gray-800 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500"
+            className="w-full p-4 text-lg text-gray-800 border border-green-300 rounded-full shadow-sm bg-green-50/50 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-green-300"
           />
         </div>
 
@@ -80,7 +80,7 @@ export const ServiceCards = () => {
                 className={`btn text-sm font-medium text-black rounded-full  transition-colors ${
                   selectedCategory === category
                     ? "bg-green-300 border-green-600/25"
-                    : "bg-white hover:bg-green-300 hover:border-green-600/25"
+                    : "bg-green-50/50 border-green-200 hover:bg-green-300 hover:border-green-600/25"
                 }`}
               >
                 {category}

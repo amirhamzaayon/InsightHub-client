@@ -4,11 +4,14 @@ export const RecentReview = ({ review }) => {
   }
   return (
     <div className="flex flex-col w-auto gap-4 p-6 border rounded-lg bg-gradient-to-t from-green-50 via-white to-green-50 border-green-400/25">
-      <div className="flex justify-between gap-2">
+      <div className="flex justify-between gap-1">
         <h3 className="text-xl font-medium">
-          {review.serviceTitle} <br /> {review.companyName}
+          {review.serviceTitle} <br /> By{" "}
+          <strong className="text-green-400 "> {review.companyName} </strong>
         </h3>
-        <p className="p-2 bg-green-300 rounded-full badge">{review.category}</p>
+        <p className="p-2 text-xs bg-green-300 rounded-full badge">
+          {review.category}
+        </p>
       </div>
       <div className="p-4 border rounded-sm bg-slate-50/25 border-green-400/25 min-h-24">
         <p>Rating: {review.reviews?.rating}</p>

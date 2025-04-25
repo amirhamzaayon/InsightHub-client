@@ -16,7 +16,7 @@ export const FrequentlyQuestion = () => {
       <Accordion
         type="single"
         collapsible
-        className="w-full p-8 border rounded-lg border-green-600/25 bg-green-50/25"
+        className="w-full p-6 border rounded-lg sm:p-12 border-green-600/25 bg-green-50/50"
       >
         <AccordionItem value="item-1">
           <AccordionTrigger>

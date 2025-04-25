@@ -84,7 +84,7 @@ export const NavBar = () => {
         <div className="flex md:hidden">
           <button
             onClick={toggleMenu}
-            className="p-2 text-white bg-green-400 rounded-full hover:bg-green-500"
+            className="p-2 text-white bg-green-400 rounded-full hover:bg-green-500 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ export const NavBar = () => {
               </div>
             </div>
           ) : (
-            <div className="p-1 space-x-1 font-bold text-black border-2 rounded-full btn-group">
+            <div className="p-1 space-x-1 font-bold text-black border rounded-full border-green-600/25 btn-group">
               <Link
                 to="/auth/login"
                 className="border-none rounded-full btn hover:bg-green-400"
@@ -186,7 +186,7 @@ export const NavBar = () => {
               </Link>
               <Link
                 to="/auth/register"
-                className="bg-green-100 border-green-400 rounded-full hover:bg-green-400 btn"
+                className="bg-green-300 rounded-full btn border-green-600/25 hover:bg-green-400"
               >
                 Get Started
               </Link>
