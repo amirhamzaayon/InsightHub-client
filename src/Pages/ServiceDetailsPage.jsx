@@ -36,7 +36,7 @@ export const ServiceDetailsPage = () => {
       <div className="py-6">
         <NavBar></NavBar>
       </div>
-      <section className="container flex min-h-screen gap-4 p-6 mx-auto rounded-lg outline-lime-100 bg-slate-50">
+      <section className="container flex min-h-screen gap-4 p-6 mx-auto rounded-lg bg-slate-50">
         <div className="w-1/2 bg-white rounded-md">
           <ServiceDetails serviceDetails={serviceDetails}></ServiceDetails>
         </div>

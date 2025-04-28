@@ -42,10 +42,10 @@ export const Register = () => {
       <div className="min-h-[calc(100vh-132px)] mt-6 hero rounded-2xl bg-gradient-to-br from-green-100 via-white to-green-100">
         <div className="flex-col p-6 border rounded-lg hero-content lg:flex-row border-green-600/25">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Get Started!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. <br />
-              Quaerat fugiat ut assumenda excepturi exercitationem quasi.
+            <h1 className="text-5xl font-bold text-green-400">Get Started!</h1>
+            <p className="py-6 text-gray-800">
+              Explore a wide range of services tailored to your needs, <br />
+              From home repairs to pet care, we've got you covered.
             </p>
           </div>
           <div className="flex flex-col gap-6">

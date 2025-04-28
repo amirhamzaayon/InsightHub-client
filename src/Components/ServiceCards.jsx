@@ -80,7 +80,7 @@ export const ServiceCards = () => {
                 className={`btn text-sm font-medium text-black rounded-full  transition-colors ${
                   selectedCategory === category
                     ? "bg-green-300 border-green-600/25"
-                    : "bg-green-50/50 border-green-200 hover:bg-green-300 hover:border-green-600/25"
+                    : "bg-green-50/20 border-green-200 hover:bg-green-300 hover:border-green-600/25"
                 }`}
               >
                 {category}

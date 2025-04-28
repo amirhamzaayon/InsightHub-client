@@ -13,7 +13,7 @@ export const ServiceCard = ({ service }) => {
 
   return (
     service && (
-      <div className="flex flex-col gap-4 p-6 text-gray-800 border rounded-lg md:flex-row bg-green-50 border-green-400/25">
+      <div className="flex flex-col gap-4 p-6 text-gray-800 border rounded-lg md:flex-row bg-green-50/50 border-green-400/25">
         <div className="relative w-full h-auto bg-gray-300 border rounded-lg md:w-1/3 border-green-600/25">
           <img
             src={serviceImage}
