@@ -1,6 +1,6 @@
 import { AuthContext } from "@/Providers/AuthProvider";
 import { useContext, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 export const Login = () => {
@@ -28,17 +28,16 @@ export const Login = () => {
   return (
     <div>
       <div className="min-h-[calc(100vh-132px)] mt-6 hero rounded-2xl bg-gradient-to-br from-green-100 via-white to-green-100">
-        <div className="flex-col hero-content lg:flex-row-reverse">
-          {/* <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+        <div className="flex-col p-6 border rounded-lg hero-content lg:flex-row border-green-600/25">
+          <div className="text-center lg:text-left">
+            <h1 className="text-5xl font-bold text-green-400">Login now!</h1>
+            <p className="py-6 text-gray-800">
+              Not only get the service but also Insight <br />
+              Take the best services based on pure Insight
             </p>
-          </div> */}
+          </div>
           <div className="flex flex-col gap-6">
-            <div className="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
+            <div className="w-full max-w-sm border shadow-2xl card shrink-0 bg-green-50/50 shadow-green-100 border-green-600/25">
               <form onSubmit={handleSubmit} className="card-body">
                 <div className="form-control">
                   <label className="label">
@@ -48,7 +47,7 @@ export const Login = () => {
                     type="email"
                     name="email"
                     placeholder="email"
-                    className="input input-bordered"
+                    className="input focus:outline-none focus:ring-1 focus:ring-green-300"
                     required
                   />
                 </div>
@@ -60,21 +59,59 @@ export const Login = () => {
                     type="password"
                     name="password"
                     placeholder="password"
-                    className="input input-bordered"
+                    className="input focus:outline-none focus:ring-1 focus:ring-green-300"
                     required
                   />
-                  <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label>
+                  <div className="text-center">
+                    <label className=" label">
+                      {
+                        <p>
+                          Don't have an account yet?{" "}
+                          <Link
+                            to="/auth/register"
+                            className="text-green-400 label-text-alt link link-hover"
+                          >
+                            Register Now
+                          </Link>
+                        </p>
+                      }
+                    </label>
+                    <label className="label">
+                      <a
+                        href="#"
+                        className="text-red-400 label-text-alt link link-hover"
+                      >
+                        Or Forgot password?
+                      </a>
+                    </label>
+                  </div>
                 </div>
                 <div className="mt-6 form-control">
-                  <button className="btn btn-primary">Login</button>
+                  <button className="w-full text-gray-800 bg-green-400 border-none btn hover:bg-green-300">
+                    Login
+                  </button>
+                </div>
+
+                <div className="mt-4 form-control">
+                  <button
+                    onClick={() => {
+                      signInWithGoogle()
+                        .then(() => {
+                          navigate("/"); // Navigate to the home page after success
+                        })
+                        .catch((error) => {
+                          console.error("Google Sign-In Error:", error); // Handle any errors
+                        });
+                    }}
+                    className="w-full bg-green-100 border-none btn hover:bg-green-400 "
+                  >
+                    <FcGoogle />
+                    Countine with Google
+                  </button>
                 </div>
               </form>
             </div>
-            <div className="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
+            {/* <div className="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
               <div className="form-control">
                 <button
                   onClick={() => {
@@ -92,7 +129,7 @@ export const Login = () => {
                   Countine with Google
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

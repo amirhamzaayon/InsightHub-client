@@ -44,8 +44,9 @@ export const Register = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-green-400">Get Started!</h1>
             <p className="py-6 text-gray-800">
-              Explore a wide range of services tailored to your needs, <br />
-              From home repairs to pet care, we've got you covered.
+              Explore a wide range of services tailored to your needs
+              <br />
+              From home repairs to pet care, we've got you covered
             </p>
           </div>
           <div className="flex flex-col gap-6">
@@ -59,7 +60,7 @@ export const Register = () => {
                     name="name"
                     type="text"
                     placeholder="name"
-                    className="input input-bordered"
+                    className="input focus:outline-none focus:ring-1 focus:ring-green-300"
                     required
                   />
                 </div>
@@ -71,11 +72,11 @@ export const Register = () => {
                     name="email"
                     type="email"
                     placeholder="email"
-                    className="input input-bordered"
+                    className="input focus:outline-none focus:ring-1 focus:ring-green-300"
                     required
                   />
                 </div>
-                <div className="form-control">
+                {/* <div className="form-control">
                   <label className="label">
                     <span className="label-text">Photo URL</span>
                   </label>
@@ -83,10 +84,10 @@ export const Register = () => {
                     name="text"
                     type="text"
                     placeholder="Photo URL"
-                    className="input input-bordered"
+                    className=" input focus:outline-none focus:ring-1 focus:ring-green-300"
                     required
                   />
-                </div>
+                </div> */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Password</span>
@@ -95,23 +96,23 @@ export const Register = () => {
                     name="password"
                     type="password"
                     placeholder="password"
-                    className="input focus:outline-none focus:ring-1 focus:ring-green-300 "
+                    className="input focus:outline-none focus:ring-1 focus:ring-green-300"
                     required
                   />
                   <label className="label">
-                    {/* <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a> */}
-                    {
-                      <p>
-                        Have Already An Account?{" "}
-                        <Link to="/auth/login">Login</Link>
-                      </p>
-                    }
+                    <p>
+                      Have Already An Account?{" "}
+                      <Link
+                        to="/auth/login"
+                        className="text-green-400 label-text-alt link link-hover"
+                      >
+                        Login Now
+                      </Link>
+                    </p>
                   </label>
                 </div>
                 <div className="mt-6 form-control">
-                  <button className="w-full text-gray-800 bg-green-400 border-none btn hover:bg-green-500">
+                  <button className="w-full text-gray-800 bg-green-400 border-none btn hover:bg-green-300">
                     Create Account
                   </button>
                 </div>

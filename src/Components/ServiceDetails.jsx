@@ -64,16 +64,19 @@ export const ServiceDetails = ({ serviceDetails }) => {
           </div>
         </div>
 
-        <div className="w-full h-32 p-4 rounded-lg bg-green-50">
+        <div className="w-full h-32 p-4 rounded-lg bg-green-50/50">
           {description}
         </div>
         <div className="flex gap-4">
-          <button className="flex-grow rounded-full btn bg-green-50 hover:bg-green-300 border-green-300/25">
+          <button className="flex-grow rounded-full bg-green-50 btn hover:bg-green-300 border-green-300/25">
             {priceRange}
           </button>
           <button className="flex-grow rounded-full btn bg-green-50 hover:bg-green-300 border-green-300/25">
             {" "}
-            <a href={website}></a>Visit Site
+            <a href={website}>
+              {" "}
+              Visit Company Site <span className="fill-green-400">🌐</span>
+            </a>
           </button>
           <button className="bg-green-200 btn btn-circle hover:bg-green-300 border-green-600/25">
             <svg
@@ -92,7 +95,7 @@ export const ServiceDetails = ({ serviceDetails }) => {
             </svg>
           </button>
         </div>
-        <button className="bg-green-200 hover:bg-green-300 border-green-600/25 btn">
+        <button className="bg-green-200 rounded-full  hover:bg-green-300 border-green-600/25 btn">
           Create An Schedule
         </button>
       </div>
